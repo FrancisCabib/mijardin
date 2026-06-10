@@ -62,3 +62,4 @@ Thumbs.db
 # Zips / backups
 *.zip
 *_backup*
+/public/storage
