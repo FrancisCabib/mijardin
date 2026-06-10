@@ -105,31 +105,36 @@ final class CatalogLayoutData
                 'is_active' => $section->is_active,
                 'starts_at' => $section->starts_at?->toIso8601String(),
                 'ends_at' => $section->ends_at?->toIso8601String(),
-                'categories' => $section->categories->map(function (Category $category) {
-                    return [
-                        'id' => $category->id,
-                        'name' => $category->name,
-                        'slug' => $category->slug,
-                        'services' => $category->services->map(fn ($service) => [
-                            'id' => $service->id,
-                            'title' => $service->title,
-                            'subtitle' => $service->subtitle,
-                            'short_description' => $service->short_description,
-                            'long_description' => $service->long_description,
-                            'price' => $service->price,
-                            'price_formatted' => is_null($service->price)
-                                ? null
-                                : '$'.number_format((int) $service->price, 0, ',', '.'),
-                            'image_url' => $service->image_url,
-                            'tags' => $service->tags->map(fn ($tag) => [
-                                'id' => $tag->id,
-                                'name' => $tag->name,
-                                'slug' => $tag->slug,
+                'categories' => $section->categories
+                    ->filter(fn (Category $category) => $category->services->isNotEmpty())
+                    ->map(function (Category $category) {
+                        return [
+                            'id' => $category->id,
+                            'name' => $category->name,
+                            'slug' => $category->slug,
+                            'services' => $category->services->map(fn ($service) => [
+                                'id' => $service->id,
+                                'title' => $service->title,
+                                'subtitle' => $service->subtitle,
+                                'short_description' => $service->short_description,
+                                'long_description' => $service->long_description,
+                                'price' => $service->price,
+                                'price_formatted' => is_null($service->price)
+                                    ? null
+                                    : '$'.number_format((int) $service->price, 0, ',', '.'),
+                                'image_url' => $service->image_url,
+                                'tags' => $service->tags->map(fn ($tag) => [
+                                    'id' => $tag->id,
+                                    'name' => $tag->name,
+                                    'slug' => $tag->slug,
+                                ])->values()->all(),
                             ])->values()->all(),
-                        ])->values()->all(),
-                    ];
-                })->values()->all(),
+                        ];
+                    })->values()->all(),
             ];
-        })->values()->all();
+        })
+            ->filter(fn (array $section) => count($section['categories']) > 0)
+            ->values()
+            ->all();
     }
 }

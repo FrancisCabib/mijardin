@@ -32,7 +32,7 @@ class DemoCatalogSeeder extends Seeder
                     [
                         'title' => 'Corona fúnebre con cinta y texto',
                         'subtitle' => 'Presentación elegante para velorio',
-                        'price' => 50000,
+                        'price' => null,
                         'short_description' => 'Corona con flores de estación, cinta y dedicatoria según disponibilidad.',
                         'long_description' => 'Coordinamos color, flores y texto de cinta con anticipación. Entrega según horario acordado.',
                         'sort_order' => 1,
@@ -40,7 +40,7 @@ class DemoCatalogSeeder extends Seeder
                     [
                         'title' => 'Corona circular mediana con cinta',
                         'subtitle' => 'Tamaño estándar ceremonia',
-                        'price' => 45000,
+                        'price' => null,
                         'short_description' => 'Corona mediana con cinta; flores según temporada y stock.',
                         'long_description' => 'Diseño armónico para condolencias; se confirma paleta al momento del pedido.',
                         'sort_order' => 2,
@@ -48,7 +48,7 @@ class DemoCatalogSeeder extends Seeder
                     [
                         'title' => 'Corona compacta con moño y cinta',
                         'subtitle' => 'Opción sobria',
-                        'price' => 38000,
+                        'price' => null,
                         'short_description' => 'Corona más contenida con moño y cinta, ideal espacios reducidos.',
                         'long_description' => 'Incluye follaje y flores principales a elección según disponibilidad del día.',
                         'sort_order' => 3,
@@ -71,7 +71,7 @@ class DemoCatalogSeeder extends Seeder
                     [
                         'title' => 'Arreglo fúnebre en pedestal con cintas',
                         'subtitle' => 'Altura y presencia',
-                        'price' => 42000,
+                        'price' => null,
                         'short_description' => 'Arreglo vertical en pedestal con cintas y flores de temporada.',
                         'long_description' => 'Presentación formal para iglesia o velatorio; coordinar colores con anticipación.',
                         'sort_order' => 1,
@@ -79,7 +79,7 @@ class DemoCatalogSeeder extends Seeder
                     [
                         'title' => 'Corona abierta con cintas y moño',
                         'subtitle' => 'Forma abierta en L',
-                        'price' => 48000,
+                        'price' => null,
                         'short_description' => 'Corona abierta con doble cinta y detalle de moño.',
                         'long_description' => 'Diseño clásico para condolencias; texto de cinta bajo disponibilidad de taller.',
                         'sort_order' => 2,
@@ -87,7 +87,7 @@ class DemoCatalogSeeder extends Seeder
                     [
                         'title' => 'Centro fúnebre bajo con cintas',
                         'subtitle' => 'Para mesa o frente de ataúd',
-                        'price' => 35000,
+                        'price' => null,
                         'short_description' => 'Composición baja alargada con cintas combinadas.',
                         'long_description' => 'Útil para mesa principal o acompañamiento; flores sujetas a temporada.',
                         'sort_order' => 3,
@@ -110,7 +110,7 @@ class DemoCatalogSeeder extends Seeder
                     [
                         'title' => 'Caja sorpresa con flores',
                         'subtitle' => 'Compacto y elegante',
-                        'price' => 15900,
+                        'price' => null,
                         'short_description' => 'Caja rígida con selección floral compacta, ideal para escritorio o mesa.',
                         'long_description' => 'Flores surtidas según temporada; avisar si hay preferencia de tonos.',
                         'sort_order' => 1,
@@ -118,7 +118,7 @@ class DemoCatalogSeeder extends Seeder
                     [
                         'title' => 'Terrario floral mini',
                         'subtitle' => 'Vidrio y musgo',
-                        'price' => 14500,
+                        'price' => null,
                         'short_description' => 'Recipiente con mini composición y plantas de bajo mantenimiento.',
                         'long_description' => 'Dimensiones aproximadas 12 cm; incluye instrucciones de rocío.',
                         'sort_order' => 2,
@@ -126,7 +126,7 @@ class DemoCatalogSeeder extends Seeder
                     [
                         'title' => 'Set regalo: flores secas y tarjeta',
                         'subtitle' => 'Para escritorio o repisa',
-                        'price' => 11200,
+                        'price' => null,
                         'short_description' => 'Mini atado de flores preservadas con sobre y tarjeta en blanco.',
                         'long_description' => 'Combinación de tonos neutros; ideal como complemento a un ramo mayor.',
                         'sort_order' => 3,
